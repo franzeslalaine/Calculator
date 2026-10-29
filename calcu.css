@@ -1,0 +1,126 @@
+/*font declaration*/
+@font-face {
+    font-family: "SF";
+    src: url("Fonts/sf.otf") format("opentype");
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/*mainly for calcu*/
+main {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    background-image: url('gatto.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+/*whole calcu container*/
+.calculator {
+    width: 250px;
+    height: 418px;
+    padding: 15px;
+    border: 1px solid black;
+    background-color: black;
+    margin-left: auto;
+    margin-right: 300px;
+}
+/*calcu num display*/
+#display {
+    font-family: "SF", sans-serif;
+    font-size: 50px;
+    text-align: right;
+    margin: 0;
+    padding: 50px 5px 0 0;
+    color: white;
+    overflow-x: hidden; /*prevent calculator from getting wider when there are a lot of numbers*/
+    white-space: nowrap; /*keeps numbers on a single line */
+    word-break: keep-all; /*prevent breaks*/
+    overflow-y: hidden; /*just in case*/ 
+}
+/*calcu keys as group*/
+#keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /*fr- fractional unit*/
+    gap: 5px;
+}
+/*calcu keys appearance*/
+.key {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-family: "SF", sans-serif;
+    font-size: 25px;
+}
+/*when selected*/
+.key:active {
+    background-color: white;
+}
+.digit, .seehistory {
+    background-color: #333333;
+}
+.strip, .clears, .percent {
+    background-color: #505050; 
+}
+.op, .equals {
+    background-color: #ff9f0a;
+}
+.cal-his {
+    width: 250px;
+    height: 418px;
+    border: 1px solid black;
+    background-color: black;
+    overflow-x: hidden; /*just in case*/  
+    overflow-y: auto; 
+    margin-left: auto;
+    margin-right: 300px;
+}
+#history {
+    color: white;
+    margin-top: 15px;
+    margin-left: 30px;
+    font-family: "SF", sans-serif;
+}
+#back-button {
+    font-family: "SF", sans-serif;
+    color: white;
+    background-color: #ff9f0a;
+    border: none;
+    cursor: pointer;
+    margin-right: 5px;
+    padding: 2.5px;
+}
+#clear-button {
+    font-family: "SF", sans-serif;
+    color: white;
+    background-color: #ff9f0a;
+    border: none;
+    cursor: pointer;
+    padding: 2.5px;
+}
+#remove-button {
+    font-family: "SF", sans-serif;
+    color: white;
+    background-color: #ff9f0a;
+    border: none;
+    cursor: pointer;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    padding: 2.5px;
+}
+#back-button:active {
+    background-color: white;
+}
+#clear-button:active {
+    background-color: white;
+}
+#remove-button:active {
+    background-color: white;
+}
